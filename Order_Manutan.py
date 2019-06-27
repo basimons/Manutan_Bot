@@ -41,7 +41,7 @@ def Orderman(driver,num,Link):
 	#Zip-code
 	Zipcode = driver.find_element_by_name('POSTCODE')
 	Zipcode.click()
-	Zipcode.send_keys(Street_adjective)
+	Zipcode.send_keys(Zip_code)
 	
 	#House number
 	Housenum = driver.find_element_by_id('HUISNR')
@@ -51,7 +51,7 @@ def Orderman(driver,num,Link):
 	#House addon
 	Houseaddon = driver.find_element_by_name('TOEVOEGING')
 	Houseaddon.click()
-	Houseaddon.send_keys(Zip_code)
+	Houseaddon.send_keys(Street_adjective)
 	
 	#Initials
 	Initials_element = driver.find_element_by_id('INITIALS')

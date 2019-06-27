@@ -79,22 +79,27 @@ def Orderman(driver,num,Link):
 
 	return
 
-def main(num,Link):
-	
+def main(Link):
+
 	#initialize driver
-	driver = webdriver.Firefox(executable_path=r'./Drivers/geckodriver')
+	if Browser == 'Firefox':
+	    driver = webdriver.Firefox(executable_path=r'./Drivers/geckodriver')
+	if Browser == 'Chrome':
+	    driver = webdriver.Firefox(executable_path=r'./Drivers/chromedriver')
+	if Browser != ('Firefox' or 'Chrome'):
+	    print('No valid Browser was given')
+	    exit()
+
 	driver.get(Link)
-
 	#go to manutan catologus site and order n amount.
-
 	while Number_of_manutans > 5:
-		if 0 <= Number_of_manutans <= 5
+		if (0 <= Number_of_manutans <= 5):
 			Orderman(driver, Number_of_manutans,Link)
-			break		
+			break
+		
 		Orderman(driver,5,Link)		
 		Number_of_manutans -= 5
 		driver.refresh()
-	
 	#done
 	driver.close()
 	return 
@@ -102,4 +107,4 @@ def main(num,Link):
 
 
 
-main(Number_of_manutans,Link)
+main(Link)

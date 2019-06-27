@@ -8,3 +8,4 @@ Initials='B.O.T.'
 Zip_code='1212'
 City='xxxx'
 Surname='Foo'
+Browser='Firefox'               #Firefox or Chrome

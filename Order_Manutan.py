@@ -82,7 +82,7 @@ def Orderman(driver,num,Link):
 def main(num,Link):
 	
 	#initialize driver
-	driver = webdriver.Firefox(executable_path=r'./geckodriver')
+	driver = webdriver.Firefox(executable_path=r'./Drivers/geckodriver')
 	driver.get(Link)
 
 	#go to manutan catologus site and order n amount.
